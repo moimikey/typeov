@@ -14,7 +14,20 @@
     "url": "https://github.com/moimikey/typeov/issues"
   },
   "homepage": "https://github.com/moimikey/typeov",
-  "keywords": [],
+  "keywords": [
+    "type",
+    "types",
+    "coerce",
+    "coercion",
+    "checker",
+    "check",
+    "flow",
+    "typing",
+    "typeof",
+    "typeov",
+    "detection",
+    "nodeps"
+  ],
   "browser": {
     "fs": false
   },
