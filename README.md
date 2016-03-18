@@ -24,15 +24,15 @@ if (typeov(something) === 'array') {
 - json
 
 
-[npm-version-url]: https://www.npmjs.com/package/PACKAGE_NAME
-[npm-version-image]: https://img.shields.io/npm/v/PACKAGE_NAME.svg
-[npm-license-url]: https://github.com/moimikey/PACKAGE_NAME/blob/master/LICENSE
-[npm-license-image]: https://img.shields.io/npm/l/PACKAGE_NAME.svg
-[npm-downloads-url]: https://www.npmjs.com/package/PACKAGE_NAME
-[npm-downloads-image]: https://img.shields.io/npm/dm/PACKAGE_NAME.svg
-[npm-deps-url]: https://david-dm.org/moimikey/PACKAGE_NAME
-[npm-deps-image]: https://img.shields.io/david/moimikey/PACKAGE_NAME.svg
-[npm-devdeps-url]: https://david-dm.org/moimikey/PACKAGE_NAME
-[npm-devdeps-image]: https://img.shields.io/david/dev/moimikey/PACKAGE_NAME.svg
-[travis-url]: https://travis-ci.org/moimikey/PACKAGE_NAME
-[travis-image]: https://travis-ci.org/moimikey/PACKAGE_NAME.svg?branch=master
+[npm-version-url]: https://www.npmjs.com/package/typeov
+[npm-version-image]: https://img.shields.io/npm/v/typeov.svg
+[npm-license-url]: https://github.com/moimikey/typeov/blob/master/LICENSE
+[npm-license-image]: https://img.shields.io/npm/l/typeov.svg
+[npm-downloads-url]: https://www.npmjs.com/package/typeov
+[npm-downloads-image]: https://img.shields.io/npm/dm/typeov.svg
+[npm-deps-url]: https://david-dm.org/moimikey/typeov
+[npm-deps-image]: https://img.shields.io/david/moimikey/typeov.svg
+[npm-devdeps-url]: https://david-dm.org/moimikey/typeov
+[npm-devdeps-image]: https://img.shields.io/david/dev/moimikey/typeov.svg
+[travis-url]: https://travis-ci.org/moimikey/typeov
+[travis-image]: https://travis-ci.org/moimikey/typeov.svg?branch=master
