@@ -1,0 +1,42 @@
+{
+  "name": "typeov",
+  "version": "1.0.0",
+  "description": "weak but accurate type checking that returns a string representation of input's type",
+  "main": "lib/index.js",
+  "preferGlobal": false,
+  "author": "Michael Scott Hertzberg <mshertzberg@gmail.com> (http://hertzber.gs/)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/moimikey/typeov.git"
+  },
+  "bugs": {
+    "url": "https://github.com/moimikey/typeov/issues"
+  },
+  "homepage": "https://github.com/moimikey/typeov",
+  "keywords": [],
+  "browser": {
+    "fs": false
+  },
+  "scripts": {
+    "prebuild": "npm-run-all --sequential lint test clean",
+    "build": "babel --ignore *.spec.js -d lib src",
+    "clean": "rimraf .eslintcache {lib,build}/**/*.{js,log}",
+    "lint": "eslint --cache src benchmark",
+    "prepublish": "npm-run-all --sequential build",
+    "test": "babel-tap src/**/*.spec.js"
+  },
+  "devDependencies": {
+    "babel-cli": "6.6.5",
+    "babel-core": "6.7.2",
+    "babel-eslint": "6.0.0-beta.6",
+    "babel-preset-es2015": "6.6.0",
+    "babel-tap": "5.0.0",
+    "benchmark": "2.1.0",
+    "eslint": "2.4.0",
+    "eslint-plugin-babel": "3.1.0",
+    "npm-run-all": "1.5.3",
+    "rimraf": "2.5.2",
+    "tap": "5.7.0"
+  }
+}
