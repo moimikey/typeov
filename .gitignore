@@ -92,3 +92,4 @@ Temporary Items
 lib/
 build/
 benchmark/
+index.js
