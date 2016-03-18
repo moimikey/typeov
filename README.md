@@ -1,4 +1,5 @@
 # typeov [![Build Status][travis-image]][travis-url]
+[![Version][npm-version-image]][npm-version-url] [![License][npm-license-image]][npm-license-url] [![Downloads][npm-downloads-image]][npm-downloads-url] [![Deps][npm-deps-image]][npm-deps-url] [![DevDeps][npm-devdeps-image]][npm-devdeps-url]
 
 # Usage
 ```js
@@ -22,7 +23,6 @@ if (typeov(something) === 'array') {
 ### TODO
 - json
 
-[![Version][npm-version-image]][npm-version-url] [![License][npm-license-image]][npm-license-url] [![Downloads][npm-downloads-image]][npm-downloads-url] [![Deps][npm-deps-image]][npm-deps-url] [![DevDeps][npm-devdeps-image]][npm-devdeps-url]
 
 [npm-version-url]: https://www.npmjs.com/package/PACKAGE_NAME
 [npm-version-image]: https://img.shields.io/npm/v/PACKAGE_NAME.svg
