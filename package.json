@@ -34,7 +34,7 @@
   "scripts": {
     "prebuild": "npm-run-all --sequential lint test clean",
     "build": "babel --ignore *.spec.js -d . src",
-    "clean": "rimraf .eslintcache {lib,build}/**/*.{js,log}",
+    "clean": "rimraf .eslintcache *.log* index.js",
     "lint": "eslint --cache src benchmark",
     "prepublish": "npm-run-all --sequential build",
     "test": "babel-tap src/**/*.spec.js"

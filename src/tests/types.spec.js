@@ -2,7 +2,6 @@
 import * as tap from 'tap'
 import { typeov } from '..'
 const test = tap.test
-if ('function' !== typeof typeov) tap.fail('typeov is not a function')
 test('float', t => {
   t.equal(typeov(Math.PI), 'float')
   t.end()
