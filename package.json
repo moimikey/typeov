@@ -54,7 +54,7 @@
   "dependencies": {
     "babel-core": "6.7.4",
     "babel-eslint": "6.0.2",
-    "eslint": "2.5.3",
+    "eslint": "2.7.0",
     "npm-run-all": "1.7.0"
   }
 }
