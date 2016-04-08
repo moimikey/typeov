@@ -52,7 +52,7 @@
     "tap": "5.7.1"
   },
   "dependencies": {
-    "babel-core": "6.7.4",
+    "babel-core": "6.7.5",
     "babel-eslint": "6.0.2",
     "eslint": "2.5.3",
     "npm-run-all": "1.7.0"
