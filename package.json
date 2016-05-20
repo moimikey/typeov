@@ -47,7 +47,7 @@
     "babel-tap": "5.0.0",
     "eslint": "2.10.1",
     "eslint-plugin-babel": "3.2.0",
-    "npm-run-all": "2.1.0",
+    "npm-run-all": "2.1.1",
     "rimraf": "2.5.2",
     "tap": "5.7.1"
   }
