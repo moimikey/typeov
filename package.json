@@ -13,6 +13,9 @@
   "bugs": {
     "url": "https://github.com/moimikey/typeov/issues"
   },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
   "homepage": "https://github.com/moimikey/typeov",
   "keywords": [
     "type",
