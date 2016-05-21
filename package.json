@@ -36,8 +36,9 @@
     "build": "babel --ignore *.spec.js -d . src",
     "clean": "rimraf .eslintcache *.log* index.js",
     "lint": "eslint --cache src benchmark",
-    "prepublish": "npm-run-all --sequential build",
-    "test": "babel-tap src/**/*.spec.js"
+    "prepublish": "publish-please guard && npm-run-all --sequential build",
+    "test": "babel-tap src/**/*.spec.js",
+    "publish-please": "publish-please"
   },
   "devDependencies": {
     "babel-cli": "6.9.0",
@@ -47,7 +48,8 @@
     "babel-tap": "5.0.0",
     "eslint": "2.10.1",
     "eslint-plugin-babel": "3.2.0",
-    "npm-run-all": "2.1.1",
+    "npm-run-all": "2.0.0",
+    "publish-please": "2.1.1",
     "rimraf": "2.5.2",
     "tap": "5.7.1"
   }
