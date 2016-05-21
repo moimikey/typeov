@@ -39,7 +39,7 @@
     "build": "babel --ignore *.spec.js -d . src",
     "clean": "rimraf .eslintcache *.log*",
     "lint": "eslint --cache src benchmark",
-    "prepublish": "publish-please guard && npm-run-all --sequential prebuild",
+    "prepublish": "publish-please guard && npm-run-all --sequential build",
     "test": "babel-tap src/**/*.spec.js",
     "publish-please": "publish-please"
   },
