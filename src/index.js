@@ -24,6 +24,6 @@ export function typeov(input) {
     case 'symbol':
       return 'symbol'
     default:
-      return 'unsure?'
+      return null
   }
 }
