@@ -33,6 +33,6 @@ function typeov(input) {
     case 'symbol':
       return 'symbol';
     default:
-      return 'unsure?';
+      return void 0;
   }
 }
