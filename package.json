@@ -44,7 +44,7 @@
     "publish-please": "publish-please"
   },
   "devDependencies": {
-    "babel-cli": "6.9.0",
+    "babel-cli": "6.10.0",
     "babel-core": "6.9.1",
     "babel-eslint": "6.0.4",
     "babel-preset-es2015": "6.9.0",
