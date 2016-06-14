@@ -3,7 +3,7 @@ exports.typeov = function typeov(input) {
   const isNaN = Number.isNaN
   const isSafeInteger = Number.isSafeInteger
   const isFinite = Number.isFinite
-  const isPromise = obj => Object.prototype.toString.call(obj) === '[object Promise]'
+  const isPromise = obj => Object.prototype.toString.call(obj) === '[object Promise]' || obj.constructor && obj.constructor.name === 'Promise'
   const isDate = obj => Object.prototype.toString.call(obj) === '[object Date]'
   const isJSON = obj => {
     try {
