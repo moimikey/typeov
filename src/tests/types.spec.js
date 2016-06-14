@@ -50,3 +50,18 @@ test('array', t => {
   t.equal(typeov([]), 'array')
   t.end()
 })
+test('date', t => {
+  t.equal(typeov(new Date), 'date')
+  t.end()
+})
+test('json', t => {
+  t.equal(typeov('[{"A": "B"}]'), 'json')
+  t.notEqual(typeov('[{a: "B"}]'), 'json')
+  t.equal(typeov('{"A":"B"}'), 'json')
+  t.notEqual(typeov('{a:"B"}'), 'json')
+  t.end()
+})
+test('promise', t => {
+  t.equal(typeov(Promise.resolve(true)), 'promise')
+  t.end()
+})

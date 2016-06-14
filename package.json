@@ -41,6 +41,7 @@
     "lint": "eslint --cache src benchmark",
     "prepublish": "publish-please guard && npm-run-all --sequential build",
     "test": "babel-tap src/**/*.spec.js",
+    "test:watch": "nodemon -w src --exec babel-tap -Rspec src/**/*.spec.js",
     "publish-please": "publish-please"
   },
   "devDependencies": {
@@ -51,6 +52,7 @@
     "babel-tap": "5.0.0",
     "eslint": "2.12.0",
     "eslint-plugin-babel": "3.2.0",
+    "nodemon": "1.9.2",
     "npm-run-all": "2.1.2",
     "publish-please": "2.1.4",
     "rimraf": "2.5.2",
