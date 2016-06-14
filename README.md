@@ -3,7 +3,7 @@
 
 # It's decently~~pretty~~ small!
 ```js
-/* 1.1.4; 1.2KB */
+/* 1.2.0; 1.2KB */
 "use strict";var _typeof=typeof Symbol==="function"&&typeof Symbol.iterator==="symbol"?function(obj){return typeof obj}:function(obj){return obj&&typeof Symbol==="function"&&obj.constructor===Symbol?"symbol":typeof obj};exports.typeov=function typeov(input){var isArray=Array.isArray;var isNaN=Number.isNaN;var isSafeInteger=Number.isSafeInteger;var isFinite=Number.isFinite;var isPromise=function isPromise(obj){return Object.prototype.toString.call(obj)==="[object Promise]"};var isDate=function isDate(obj){return Object.prototype.toString.call(obj)==="[object Date]"};var isJSON=function isJSON(obj){try{return!!JSON.parse(obj)}catch(e){return false}};switch(typeof input==="undefined"?"undefined":_typeof(input)){case"string":if(isJSON(input))return"json";return"string";case"object":if(input===null)return"null";if(isPromise(input))return"promise";if(isDate(input))return"date";if(isArray(input))return"array";return"object";case"number":if(isNaN(input))return"nan";if(isSafeInteger(input))return"number";if(isFinite(input))return"float";return"infinity";case"undefined":return"undefined";case"function":return"function";case"boolean":return"boolean";case"symbol":return"symbol";default:return undefined}};
 ```
 
