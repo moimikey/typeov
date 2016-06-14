@@ -29,7 +29,20 @@
     "typeof",
     "typeov",
     "detection",
-    "nodeps"
+    "nodeps",
+    "ispromise",
+    "isnumber",
+    "isinfinity",
+    "isnull",
+    "isundefined",
+    "isbool",
+    "isboolean",
+    "isarray",
+    "isobject",
+    "isstring",
+    "whatis",
+    "kindof",
+    "assert"
   ],
   "browser": {
     "fs": false
@@ -45,11 +58,9 @@
     "publish-please": "publish-please"
   },
   "devDependencies": {
-    "babel-cli": "6.10.1",
     "babel-core": "6.9.1",
     "babel-eslint": "6.0.4",
     "babel-preset-es2015": "6.9.0",
-    "babel-preset-node5": "11.1.0",
     "babel-tap": "5.0.0",
     "eslint": "2.12.0",
     "eslint-plugin-babel": "3.2.0",
