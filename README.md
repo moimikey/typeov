@@ -1,10 +1,10 @@
 # typeov [![Build Status][travis-image]][travis-url]
 [![Version][npm-version-image]][npm-version-url] [![License][npm-license-image]][npm-license-url] [![Downloads][npm-downloads-image]][npm-downloads-url] [![Deps][npm-deps-image]][npm-deps-url] [![DevDeps][npm-devdeps-image]][npm-devdeps-url]
 
-# It's pretty small!
+# It's decently~~pretty~~ small!
 ```js
-/* 1.0.3;  735b */
-"use strict";function typeov(e){var n=Array.isArray,t=Number.isNaN,r=Number.isSafeInteger,o=Number.isFinite;switch("undefined"==typeof e?"undefined":_typeof(e)){case"string":return"string";case"object":return null===e?"null":n(e)?"array":"object";case"number":return t(e)?"nan":r(e)?"number":o(e)?"float":"infinity";case"undefined":return"undefined";case"function":return"function";case"boolean":return"boolean";case"symbol":return"symbol";default:return"unsure?"}}Object.defineProperty(exports,"__esModule",{value:!0});var _typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol?"symbol":typeof e};exports.typeov=typeov;
+/* 1.1.4; 1.2KB */
+"use strict";var _typeof=typeof Symbol==="function"&&typeof Symbol.iterator==="symbol"?function(obj){return typeof obj}:function(obj){return obj&&typeof Symbol==="function"&&obj.constructor===Symbol?"symbol":typeof obj};exports.typeov=function typeov(input){var isArray=Array.isArray;var isNaN=Number.isNaN;var isSafeInteger=Number.isSafeInteger;var isFinite=Number.isFinite;var isPromise=function isPromise(obj){return Object.prototype.toString.call(obj)==="[object Promise]"};var isDate=function isDate(obj){return Object.prototype.toString.call(obj)==="[object Date]"};var isJSON=function isJSON(obj){try{return!!JSON.parse(obj)}catch(e){return false}};switch(typeof input==="undefined"?"undefined":_typeof(input)){case"string":if(isJSON(input))return"json";return"string";case"object":if(input===null)return"null";if(isPromise(input))return"promise";if(isDate(input))return"date";if(isArray(input))return"array";return"object";case"number":if(isNaN(input))return"nan";if(isSafeInteger(input))return"number";if(isFinite(input))return"float";return"infinity";case"undefined":return"undefined";case"function":return"function";case"boolean":return"boolean";case"symbol":return"symbol";default:return undefined}};
 ```
 
 # Usage
@@ -38,10 +38,8 @@ if (typeov(b) === 'float') {
 - object
 - symbol
 - undefined
-
-### TODO
 - json
-
+- promise
 
 [npm-version-url]: https://www.npmjs.com/package/typeov
 [npm-version-image]: https://img.shields.io/npm/v/typeov.svg

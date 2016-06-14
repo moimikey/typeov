@@ -1,4 +1,4 @@
-export function typeov(input) {
+exports.typeov = function typeov(input) {
   const isArray = Array.isArray
   const isNaN = Number.isNaN
   const isSafeInteger = Number.isSafeInteger
