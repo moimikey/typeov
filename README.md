@@ -27,6 +27,11 @@ if (typeov(b) === 'float') {
 }
 ```
 
+```js
+const jsonString = '[{"version":"1.2.3"}]'
+const isJSON = typeov(jsonString) === 'json' // true
+```
+
 ### Possible return values
 - array
 - boolean
@@ -40,6 +45,36 @@ if (typeov(b) === 'float') {
 - undefined
 - json
 - promise
+
+#### todo
+
+- set
+- weakset
+- map
+- weakmap
+- regexp
+- buffer
+- stream
+
+# notes
+
+> Be mindful of what you're checking
+
+```node
+> typeov(Symbol)
+'function'
+> typeov(Symbol())
+'symbol'
+```
+
+```node
+> typeov(Promise)
+'function'
+> typeov(new Promise(() => {}))
+'promise'
+> typeov(Promise.resolve(true))
+'promise'
+```
 
 [npm-version-url]: https://www.npmjs.com/package/typeov
 [npm-version-image]: https://img.shields.io/npm/v/typeov.svg
