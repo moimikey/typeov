@@ -35,26 +35,23 @@ const isJSON = typeov(jsonString) === 'json' // true
 ### Possible return values
 - array
 - boolean
+- buffer
 - float
 - function
 - infinity
+- json
+- map
 - null
 - number
 - object
+- promise
+- regexp
+- set
+- stream
 - symbol
 - undefined
-- json
-- promise
-
-#### todo
-
-- set
-- weakset
-- map
 - weakmap
-- regexp
-- buffer
-- stream
+- weakset
 
 # notes
 

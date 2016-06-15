@@ -3,8 +3,15 @@ exports.typeov = function typeov(input) {
   const isNaN = Number.isNaN
   const isSafeInteger = Number.isSafeInteger
   const isFinite = Number.isFinite
-  const isPromise = obj => Object.prototype.toString.call(obj) === '[object Promise]' || obj.constructor && obj.constructor.name === 'Promise'
-  const isDate = obj => Object.prototype.toString.call(obj) === '[object Date]'
+  const is = obj => Object.prototype.toString.call(obj)
+  const isBuffer = obj => is(obj) === '[object Uint8Array]'
+  const isDate = obj => obj instanceof Date
+  const isMap = obj => is(obj) === '[object Map]'
+  const isPromise = obj => is(obj) === '[object Promise]' || obj.constructor && obj.constructor.name === 'Promise'
+  const isRegexp = obj => obj instanceof RegExp
+  const isSet = obj => is(obj) === '[object Set]'
+  const isWeakMap = obj => is(obj) === '[object WeakMap]'
+  const isWeakSet = obj => is(obj) === '[object WeakSet]'
   const isJSON = obj => {
     try {
       return !!JSON.parse(obj)
@@ -18,9 +25,15 @@ exports.typeov = function typeov(input) {
       return 'string'
     case 'object':
       if (input === null) return 'null'
-      if (isPromise(input)) return 'promise'
-      if (isDate(input)) return 'date'
       if (isArray(input)) return 'array'
+      if (isDate(input)) return 'date'
+      if (isRegexp(input)) return 'regexp'
+      if (isPromise(input)) return 'promise'
+      if (isSet(input)) return 'set'
+      if (isWeakSet(input)) return 'weakset'
+      if (isMap(input)) return 'map'
+      if (isWeakMap(input)) return 'weakmap'
+      if (isBuffer(input)) return 'buffer'
       return 'object'
     case 'number':
       if (isNaN(input)) return 'nan'
