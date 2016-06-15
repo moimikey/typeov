@@ -29,7 +29,6 @@
     "typeof",
     "typeov",
     "detection",
-    "nodeps",
     "ispromise",
     "isnumber",
     "isinfinity",
@@ -42,7 +41,9 @@
     "isstring",
     "whatis",
     "kindof",
-    "assert"
+    "assert",
+    "is",
+    "what"
   ],
   "browser": {
     "fs": false
