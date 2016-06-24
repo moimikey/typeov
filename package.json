@@ -69,6 +69,6 @@
     "npm-run-all": "2.1.2",
     "publish-please": "2.1.4",
     "rimraf": "2.5.2",
-    "tap": "5.7.2"
+    "tap": "5.8.0"
   }
 }
