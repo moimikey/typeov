@@ -68,7 +68,7 @@
     "nodemon": "1.9.2",
     "npm-run-all": "2.3.0",
     "publish-please": "2.1.4",
-    "rimraf": "2.5.2",
+    "rimraf": "2.5.3",
     "tap": "6.1.1"
   }
 }
