@@ -4,12 +4,19 @@ import { typeov } from '..'
 const test = tap.test
 test('float', t => {
   t.equal(typeov(Math.PI), 'float', '=== Math.PI/3.14')
+  t.equal(typeov(6.666666666), 'float', '=== 6.666666666')
+  t.equal(typeov(6.6), 'float', '=== 6.6')
+  t.equal(typeov(.6), 'float', '=== .6')
+  t.equal(typeov(0.6), 'float', '=== 0.6')
+  t.equal(typeov(1e99), 'float', '=== 1e99')
   t.end()
 })
 test('number', t => {
   t.equal(typeov(666), 'number', '=== 666')
   t.equal(typeov(+0), 'number', '=== +0')
   t.equal(typeov(-0), 'number', '=== -0')
+  t.equal(typeov(0), 'number', '=== 0')
+  t.equal(typeov(1e6), 'number', '=== 1e6')
   t.end()
 })
 test('string', t => {
@@ -19,6 +26,7 @@ test('string', t => {
 test('boolean', t => {
   t.equal(typeov(true), 'boolean', '=== true')
   t.equal(typeov(false), 'boolean', '=== false')
+  t.equal(typeov(Boolean()), 'boolean', '=== Boolean()')
   t.end()
 })
 test('symbol', t => {
@@ -46,6 +54,7 @@ test('function', t => {
 test('object', t => {
   t.equal(typeov({}), 'object', '=== {}')
   t.equal(typeov(Object.create(null)), 'object', '=== Object.create(null)')
+  t.equal(typeov(new function(){}), 'object', '=== new function(){}')
   t.end()
 })
 test('array', t => {
