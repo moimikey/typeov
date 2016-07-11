@@ -17,6 +17,7 @@
     "registry": "https://registry.npmjs.org"
   },
   "homepage": "https://github.com/moimikey/typeov",
+  "reveal": true,
   "keywords": [
     "type",
     "types",
