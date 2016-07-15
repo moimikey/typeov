@@ -70,6 +70,6 @@
     "npm-run-all": "2.3.0",
     "publish-please": "2.1.4",
     "rimraf": "2.5.3",
-    "tap": "6.1.1"
+    "tap": "6.2.0"
   }
 }
