@@ -1,10 +1,19 @@
 # typeov [![Build Status][travis-image]][travis-url]
-[![Version][npm-version-image]][npm-version-url] [![License][npm-license-image]][npm-license-url] [![Downloads][npm-downloads-image]][npm-downloads-url] [![Deps][npm-deps-image]][npm-deps-url] [![DevDeps][npm-devdeps-image]][npm-devdeps-url]
+[![Version][npm-version-image]][npm-version-url] [![Downloads][npm-downloads-image]][npm-downloads-url] [![Deps][npm-deps-image]][npm-deps-url] [![DevDeps][npm-devdeps-image]][npm-devdeps-url]
 
 # It's decently~~pretty~~ small!
 ```js
 /* 1.2.0; 1.2KB */
 "use strict";var _typeof=typeof Symbol==="function"&&typeof Symbol.iterator==="symbol"?function(obj){return typeof obj}:function(obj){return obj&&typeof Symbol==="function"&&obj.constructor===Symbol?"symbol":typeof obj};exports.typeov=function typeov(input){var isArray=Array.isArray;var isNaN=Number.isNaN;var isSafeInteger=Number.isSafeInteger;var isFinite=Number.isFinite;var isPromise=function isPromise(obj){return Object.prototype.toString.call(obj)==="[object Promise]"};var isDate=function isDate(obj){return Object.prototype.toString.call(obj)==="[object Date]"};var isJSON=function isJSON(obj){try{return!!JSON.parse(obj)}catch(e){return false}};switch(typeof input==="undefined"?"undefined":_typeof(input)){case"string":if(isJSON(input))return"json";return"string";case"object":if(input===null)return"null";if(isPromise(input))return"promise";if(isDate(input))return"date";if(isArray(input))return"array";return"object";case"number":if(isNaN(input))return"nan";if(isSafeInteger(input))return"number";if(isFinite(input))return"float";return"infinity";case"undefined":return"undefined";case"function":return"function";case"boolean":return"boolean";case"symbol":return"symbol";default:return undefined}};
+```
+
+# Install
+```js
+npm install --save typeov
+```
+
+```js
+yarn add typeov
 ```
 
 # Usage
@@ -53,7 +62,7 @@ const isJSON = typeov(jsonString) === 'json' // true
 - weakmap
 - weakset
 
-# notes
+# Words of Wisdom
 
 > Be mindful of what you're checking
 
@@ -72,6 +81,9 @@ const isJSON = typeov(jsonString) === 'json' // true
 > typeov(Promise.resolve(true))
 'promise'
 ```
+
+# License
+[![License][npm-license-image]][npm-license-url]
 
 [npm-version-url]: https://www.npmjs.com/package/typeov
 [npm-version-image]: https://img.shields.io/npm/v/typeov.svg
