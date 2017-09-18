@@ -1,4 +1,6 @@
 # typeov [![Build Status][travis-image]][travis-url]
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/moimikey/typeov.svg)](https://greenkeeper.io/)
 [![Version][npm-version-image]][npm-version-url] [![Downloads][npm-downloads-image]][npm-downloads-url] [![Deps][npm-deps-image]][npm-deps-url] [![DevDeps][npm-devdeps-image]][npm-devdeps-url]
 
 # It's decently~~pretty~~ small!
