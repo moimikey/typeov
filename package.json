@@ -1,12 +1,11 @@
 {
   "name": "typeov",
   "version": "1.2.4",
-  "description": "weak but accurate type checking that returns a string representation of input's type",
-  "main": "index.js",
+  "description": "👺 weak but accurate type checking that returns a string representation of input's type",
+  "main": "dist/typeov.js",
   "preferGlobal": false,
   "author": "Michael Scott Hertzberg <mshertzberg@gmail.com> (http://hertzber.gs/)",
   "license": "MIT",
-  "flat": true,
   "repository": {
     "type": "git",
     "url": "https://github.com/moimikey/typeov.git"
@@ -51,26 +50,24 @@
     "fs": false
   },
   "scripts": {
-    "prebuild": "npm-run-all --sequential lint test clean",
-    "build": "babel --ignore *.spec.js -d . src",
-    "clean": "rimraf .eslintcache *.log*",
-    "lint": "eslint --cache src benchmark",
-    "prepublish": "publish-please guard && npm-run-all --sequential build",
-    "test": "babel-tap src/**/*.spec.js",
-    "test:watch": "nodemon -w src --exec babel-tap -Rspec src/**/*.spec.js",
-    "publish-please": "publish-please"
+    "build": "npm-run-all -s compile",
+    "cleanup": "rimraf .eslintcache *.log* dist/*",
+    "compile": "babel src/typeov.js --minified --compress -o dist/typeov.js",
+    "lint": "standard src/**/*.js",
+    "prebuild": "npm-run-all -s lint test cleanup",
+    "prepublish": "publish-please guard && npm-run-all -s build",
+    "publish-please": "publish-please",
+    "test:watch": "nodemon -w src --exec tap -Rspec src/typeov.spec.js",
+    "test": "tap src/typeov.spec.js"
   },
   "devDependencies": {
-    "babel-cli": "6.18.0",
-    "babel-eslint": "7.1.1",
-    "babel-preset-es2015": "6.18.0",
-    "babel-tap": "5.0.0",
-    "eslint": "3.13.1",
-    "eslint-plugin-babel": "4.0.0",
-    "nodemon": "1.11.0",
-    "npm-run-all": "4.0.0",
-    "publish-please": "2.2.0",
-    "rimraf": "2.5.4",
-    "tap": "9.0.3"
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "nodemon": "^1.11.0",
+    "npm-run-all": "^4.0.0",
+    "publish-please": "^3.2.0",
+    "rimraf": "^2.6.2",
+    "standard": "^11.0.1",
+    "tap": "^12.0.1"
   }
 }

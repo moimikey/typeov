@@ -1,11 +1,8 @@
-.babelrc
-.editorconfig
+.idea
+.gitignore
+.gitattributes
 .eslintrc
 .eslintcache
+.editorconfig
+.babelrc
 *.md
-bin/
-src/
-ssl/
-test/
-benchmark/
-.idea/

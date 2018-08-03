@@ -8,6 +8,5 @@
     "gitTag": true
   },
   "confirm": true,
-  "publishTag": "latest",
-  "prePublishScript": "npm run lint && npm test"
+  "publishTag": "latest"
 }

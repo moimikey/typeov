@@ -1,4 +1,4 @@
-exports.typeov = function typeov(input) {
+exports.typeov = function typeov (input) {
   const isArray = Array.isArray
   const isNaN = Number.isNaN
   const isSafeInteger = Number.isSafeInteger
@@ -7,7 +7,7 @@ exports.typeov = function typeov(input) {
   const isBuffer = obj => is(obj) === '[object Uint8Array]'
   const isDate = obj => obj instanceof Date
   const isMap = obj => is(obj) === '[object Map]'
-  const isPromise = obj => is(obj) === '[object Promise]' || obj.constructor && obj.constructor.name === 'Promise'
+  const isPromise = obj => (is(obj) === '[object Promise]' || obj.constructor) && obj.constructor.name === 'Promise'
   const isRegexp = obj => obj instanceof RegExp
   const isSet = obj => is(obj) === '[object Set]'
   const isWeakMap = obj => is(obj) === '[object WeakMap]'
@@ -19,7 +19,7 @@ exports.typeov = function typeov(input) {
       return false
     }
   }
-  switch(typeof input) {
+  switch (typeof input) {
     case 'string':
       if (isJSON(input)) return 'json'
       return 'string'
