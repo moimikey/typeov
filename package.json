@@ -1,6 +1,6 @@
 {
   "name": "typeov",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "description": "👺 weak but accurate type checking that returns a string representation of input's type",
   "main": "dist/typeov.js",
   "preferGlobal": false,
