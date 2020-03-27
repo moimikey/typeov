@@ -65,7 +65,7 @@
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
-    "mkdirp": "^0.5.1",
+    "mkdirp": "^1.0.3",
     "nodemon": "^1.11.0",
     "npm-run-all": "^4.0.0",
     "publish-please": "^3.2.0",
