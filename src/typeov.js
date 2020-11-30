@@ -49,6 +49,6 @@ exports.typeov = function typeov (input) {
     case 'symbol':
       return 'symbol'
     default:
-      return void 0
+      return undefined
   }
 }
