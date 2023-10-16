@@ -48,7 +48,12 @@ exports.typeov = function typeov (input) {
       return 'boolean'
     case 'symbol':
       return 'symbol'
+    /**
+     * @see https://node-tap.org/coverage/#handling-impossible-cases
+     */
+    /* c8 ignore start */
     default:
-      return undefined
+      throw Error("Unknown type")
+    /* c8 ignore stop */
   }
 }

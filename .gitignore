@@ -1,5 +1,6 @@
 .eslintcache
 .idea
+.nyc_output
+.tap
 dist
 node_modules
-.nyc_output

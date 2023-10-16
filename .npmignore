@@ -6,3 +6,4 @@
 .editorconfig
 .babelrc
 *.md
+.tap
