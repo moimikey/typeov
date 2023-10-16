@@ -53,7 +53,7 @@ exports.typeov = function typeov (input) {
      */
     /* c8 ignore start */
     default:
-      throw Error("Unknown type")
+      throw Error('Unknown type')
     /* c8 ignore stop */
   }
 }
